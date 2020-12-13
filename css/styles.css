@@ -1,0 +1,275 @@
+/* Палитра цветов макета */
+:root {
+  --main-bg-color: #ffffff;
+  --dark-bg-color: #2f303a;
+  --pale-bg-color: #f5f4fa;
+  --btn-bg-color: #f5f4fa;
+  --primary-text-color: #757575;
+  --inverse-text-color: #ffffff;
+  --title-text-color: #212121;
+  --nav-link-color: #212121;
+  --logo-black-color: #000000;
+  --footer-address-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+}
+
+/*-------Общие стили-------*/
+
+/* Общие объявления */
+body {
+  background-color: var(--main-bg-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+div {
+  outline: 2px solid tomato;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Логотип */
+
+.logo {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+header .logo {
+  color: var(--logo-black-color);
+}
+
+footer .logo {
+  color: var(--inverse-text-color);
+}
+
+.logo-start {
+  color: var(--accent-color);
+}
+
+/* Шапка */
+
+.site-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.site-nav .link {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-contact .link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.header-contact .link:hover,
+.header-contact .link:focus {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Подвал */
+
+.site-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--dark-bg-color);
+}
+
+.address {
+  color: var(--inverse-text-color);
+  font-style: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-contact .link {
+  color: var(--footer-address-color);
+  text-decoration: none;
+}
+
+/* -------Стили для страницы Студия------- */
+
+.section.hero {
+  background-color: var(--dark-bg-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30;
+  color: var(--inverse-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--inverse-text-color);
+  border-radius: 4px;
+  border: none;
+
+  padding: 10px 32px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.feature-heading {
+  margin-top: 0;
+  margin-bottom: 10;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.feature-details {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.section.business {
+  padding-top: 0;
+}
+
+.team-member {
+  margin-top: 0;
+  margin-bottom: 10;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-position {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* -------Стили для страницы Портфолио------- */
+
+/* Секция Примеры работ*/
+
+.filter-button {
+  display: inline-block;
+  padding: 6px 22px;
+  background-color: var(--btn-bg-color);
+  color: var(--title-text-color);
+  border-radius: 4px;
+  border: none;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.filter-button.btn-active,
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--accent-color);
+  color: var(--inverse-text-color);
+  cursor: pointer;
+}
+
+.work-photo {
+  margin-bottom: 20px;
+}
+
+.work-name {
+  margin: 0;
+  margin-bottom: 4px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.work-category {
+  margin: 0;
+  margin-bottom: 0;
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}

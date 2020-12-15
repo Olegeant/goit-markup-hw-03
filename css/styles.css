@@ -137,6 +137,10 @@ footer .logo {
   cursor: pointer;
 }
 
+.header-line {
+  border-bottom: 1px solid var(--border-color);
+}
+
 /* Подвал */
 
 .site-footer {
@@ -370,7 +374,6 @@ footer .logo {
 
 .works-samples .item {
   width: calc((100% - 2 * 30px) / 3);
-  padding-bottom: 20px;
   border: 1px solid var(--border-color);
 }
 
@@ -384,7 +387,6 @@ footer .logo {
 
 .works-samples .photo {
   display: block;
-  margin-bottom: 20px;
   margin-left: -1px;
 }
 
@@ -393,8 +395,13 @@ footer .logo {
   cursor: default;
 }
 
+.work-title {
+  padding: 20px 24px;
+}
+
 .work-name {
-  margin: 0 24px 4px;
+  margin-top: 0;
+  margin-bottom: 4px;
 
   color: var(--title-text-color);
   font-weight: 700;
@@ -404,7 +411,8 @@ footer .logo {
 }
 
 .work-category {
-  margin: 0 24px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   color: var(--primary-text-color);
   font-weight: 400;

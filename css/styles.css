@@ -11,6 +11,7 @@
   --logo-black-color: #000000;
   --footer-address-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196f3;
+  --border-color: #eeeeee;
 }
 
 /*-------Общие стили-------*/
@@ -23,10 +24,6 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
 }
-
-/* div {
-  outline: 2px solid tomato;
-} */
 
 .container {
   margin-left: auto;
@@ -90,7 +87,7 @@ footer .logo {
   display: flex;
 }
 
-.nav-list > .item:not(first-child) {
+.nav-list > .item + .item {
   margin-left: 50px;
 }
 
@@ -102,7 +99,7 @@ footer .logo {
   display: flex;
 }
 
-.header-contact > .item:not(first-child) {
+.header-contact > .item + .item {
   margin-left: 50px;
 }
 
@@ -167,6 +164,7 @@ footer .logo {
 /* -------Стили для страницы Студия------- */
 
 /* Герой */
+
 .section.hero {
   background-color: var(--dark-bg-color);
   text-align: center;
@@ -176,7 +174,8 @@ footer .logo {
 
 .hero-title {
   margin-top: 0;
-  margin-bottom: 30;
+  margin-bottom: 30px;
+
   color: var(--inverse-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -187,12 +186,12 @@ footer .logo {
 
 .hero-button {
   display: inline-block;
+  padding: 10px 32px;
+
   background-color: var(--accent-color);
   color: var(--inverse-text-color);
   border-radius: 4px;
   border: none;
-
-  padding: 10px 32px;
 
   font-family: inherit;
   font-weight: 700;
@@ -203,23 +202,18 @@ footer .logo {
 }
 
 /* Секция преимуществ */
-.section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
+
+.section.features {
+  padding-bottom: 106px;
+}
+
+/* !!!! Заголовок этой секции скрыть правильно (когда расскажут как)*/
+.features .section-title {
+  display: none;
 }
 
 .feature-items {
   display: flex;
-}
-
-.feature-items .item {
-  width: calc((100% - 3 * 30px) / 4);
 }
 
 .feature-items .item:not(:last-child) {
@@ -227,7 +221,6 @@ footer .logo {
 }
 
 .feature-heading {
-  display: inline-block;
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -241,21 +234,35 @@ footer .logo {
 .feature-details {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
 /* Секция Чем мы занимаемся */
+
 .section.business {
   padding-top: 0;
+  padding-bottom: 82px;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .business-items {
   display: flex;
 }
 
-.business-items img {
+.business-items .photo {
   display: block;
 }
 
@@ -266,6 +273,7 @@ footer .logo {
 /* Секция Наша команда */
 
 .section.team {
+  padding-bottom: 103px;
   background-color: var(--pale-bg-color);
 }
 
@@ -274,6 +282,9 @@ footer .logo {
 }
 
 .team-members .item {
+  padding-bottom: 30px;
+
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--main-bg-color);
 }
 
@@ -281,13 +292,15 @@ footer .logo {
   margin-right: 30px;
 }
 
-.team-photo {
+.team-members .photo {
+  display: block;
   margin-bottom: 30px;
 }
 
 .team-member {
   margin-top: 0;
-  margin-bottom: 10;
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -298,7 +311,8 @@ footer .logo {
 
 .team-position {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -310,9 +324,15 @@ footer .logo {
 
 /* Секция Примеры работ*/
 
+/* !!!! Заголовок этой секции скрыть правильно (когда расскажут как)*/
+.works .section-title {
+  display: none;
+}
+
 .filter-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 34px;
 }
 
 .filter-button {
@@ -333,7 +353,6 @@ footer .logo {
 
 .filter-container .item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 34px;
 }
 
 .filter-button.btn-active,
@@ -350,7 +369,9 @@ footer .logo {
 }
 
 .works-samples .item {
+  width: calc((100% - 2 * 30px) / 3);
   padding-bottom: 20px;
+  border: 1px solid var(--border-color);
 }
 
 .works-samples .item:not(:nth-child(3n)) {
@@ -361,16 +382,20 @@ footer .logo {
   margin-bottom: 30px;
 }
 
-.work-photo {
+.works-samples .photo {
   display: block;
   margin-bottom: 20px;
+  margin-left: -1px;
+}
+
+.work-link {
+  text-decoration: none;
+  cursor: default;
 }
 
 .work-name {
-  padding-left: 24px;
-  padding-right: 24px;
-  margin: 0;
-  margin-bottom: 4px;
+  margin: 0 24px 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -379,10 +404,8 @@ footer .logo {
 }
 
 .work-category {
-  padding-left: 24px;
-  padding-right: 24px;
-  margin: 0;
-  margin-bottom: 0;
+  margin: 0 24px;
+
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
